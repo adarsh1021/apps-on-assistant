@@ -18,9 +18,9 @@ def black_white(r, g, b):
 @csrf_exempt
 #@require_POST
 def index(request):
-	file = os.listdir("./colors/static/colors/")
+	file = os.listdir("./static/colors/")
 	for f in file:
-		os.remove("./colors/static/colors/"+f)
+		os.remove("./static/colors/"+f)
 
 	input_data = json.loads(request.body.decode('utf-8'))
 
@@ -62,7 +62,7 @@ def index(request):
 	d.text((50, 620), "Your Color", font_color, font)
 	d.text((690, 620), "It's Complement", c_font_color, font)
 
-	file_path = "./colors/static/colors/" + conversation_id + ".png"
+	file_path = "./static/colors/" + conversation_id + ".png"
 	img.save(file_path)
 
 	current_working_response = {
