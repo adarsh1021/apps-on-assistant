@@ -37,7 +37,7 @@ def index(request):
 	img = Image.new('RGB', (1280, 720), (red, green, blue))
 	d = ImageDraw.Draw(img)
 	d.rectangle([640, 0, 1280, 720], (c_red, c_green, c_blue))
-	font = ImageFont.truetype(font="arial.ttf", size=60)
+	font = ImageFont.truetype(font="./colors/CaviarDreams_Bold.ttf", size=60)
 
 	font_color = black_white(red, green, blue)
 	c_font_color = black_white(c_red, c_green, c_blue)
