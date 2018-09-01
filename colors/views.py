@@ -79,7 +79,7 @@ def index(request):
 				{  
 					"basicCard":{  
 						"image":{  
-								"url":"https://f2318b4b.ngrok.io/static/colors/"+conversation_id+".png",
+								"url":"https://secure-tundra-21259.herokuapp.com/static/colors/"+conversation_id+".png",
 								"accessibilityText":"Indigo Taco Color"
 							}
 					}
