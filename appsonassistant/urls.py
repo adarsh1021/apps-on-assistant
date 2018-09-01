@@ -15,8 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from django.conf import settings
+import django.views
 
 urlpatterns = [
 	url(r'^colors/', include("colors.urls"), name="colors"),
     url(r'^admin/', admin.site.urls),
+    url(r'^static/(?P<path>.*)$', django.views.static.serve, {'document_root': settings.STATIC_ROOT}),
 ]
